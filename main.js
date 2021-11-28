@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded',function(){
+$(document).ready(function(){
   let sec =0;
   let min =0;
   let timer;
