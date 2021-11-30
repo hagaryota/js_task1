@@ -8,11 +8,6 @@ $(function() {
  
  //スタート 
 $(".start").click(function() {
-  sec = 0;
-  min = 0;
-  hour = 0;
-
-  $(".clock").html("0:0:0:0");
   timer = setInterval(countup, 100);
 
   $(this).prop("disabled", true);
@@ -24,10 +19,12 @@ $(".stop").click(function(){
   clearInterval(timer);
 
   $(this).prop("disabled", true);
+  $(".start").prop("disabled", false);
 })
 
 //リセット
 $(".reset").click(function() {
+  fps = 0;
   sec = 0;
   min = 0;
   hour =0;
